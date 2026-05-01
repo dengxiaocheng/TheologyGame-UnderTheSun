@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日光之下：加利利的一年</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #241f1a;
+      --muted: #6f6253;
+      --paper: #f8f1df;
+      --line: #d7c3a1;
+      --olive: #51613b;
+      --clay: #9a5d35;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: ui-serif, Georgia, "Noto Serif SC", "Songti SC", serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #d9e6e8 0%, var(--paper) 34%, #ead7b4 100%);
+    }
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      background: rgba(248, 241, 223, 0.92);
+      box-shadow: 0 18px 48px rgba(58, 42, 24, 0.14);
+      padding: clamp(24px, 5vw, 48px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 6vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      max-width: 62ch;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .item {
+      border-left: 4px solid var(--olive);
+      background: rgba(255, 252, 242, 0.72);
+      padding: 14px;
+      min-height: 84px;
+    }
+    .item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: rgba(154, 93, 53, 0.12);
+      padding: 2px 5px;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    a.button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border: 1px solid var(--clay);
+      color: #fff;
+      background: var(--clay);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    a.button.secondary {
+      color: var(--clay);
+      background: transparent;
+    }
+    .note {
+      margin-top: 22px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <h1>日光之下</h1>
+      <p class="subtitle">加利利的一年生活模拟 RPG。你选择一个家庭，在季节、税负、安息日、邻舍关系和日常劳作之间维持生活。</p>
+      <div class="grid" aria-label="project status">
+        <div class="item"><strong>运行方式</strong>完整游戏目前是 TypeScript CLI。</div>
+        <div class="item"><strong>本地启动</strong><code>npm install</code><br><code>npm start</code></div>
+        <div class="item"><strong>主题边界</strong>公元 30 年加利利、家庭生计、律法与日常选择。</div>
+      </div>
+      <div class="actions">
+        <a class="button" href="https://github.com/dengxiaocheng/TheologyGame-UnderTheSun">查看源码</a>
+        <a class="button secondary" href="./README.md">本地运行说明</a>
+      </div>
+      <p class="note">此页面用于 GitHub Pages 公开入口，避免试玩链接返回 404；没有把 CLI 游戏重写成浏览器版本。</p>
+    </section>
+  </main>
+</body>
+</html>
